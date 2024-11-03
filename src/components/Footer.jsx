@@ -19,7 +19,7 @@ const Footer = () => {
         </nav>
         <nav>
             <h6 className="footer-title">Social</h6>
-            <div className="grid grid-flow-col gap-4">
+            <div className="grid  grid-flow-col gap-4">
                 <a>
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
