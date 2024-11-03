@@ -8,7 +8,7 @@ const Categories = ({categories}) => {
                 (<NavLink key={category.category} 
                 to={`/category/${category.category} `}
                 role="tab" 
-                className={({isActive})=> `tab ${isActive? 'tab-active' : ''}`}> 
+                className={({isActive})=> `tab text-lg font-thin ${isActive? 'tab-active' : ''}`}> 
 
                 {category.category}
 

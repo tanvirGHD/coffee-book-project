@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-    <div className="navbar bg-base-100 w-11/12 mx-auto">
+    <div className="navbar backdrop-blur  bg-white/30  fixed top-0 z-50">
+        <div className="w-10/12 mx-auto">
     <div className="lg:navbar-start ">
         <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,19 +23,20 @@ const Navbar = () => {
         <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-5">
-            <NavLink to="/" className="text-lg font-bold">Home</NavLink>
-            <NavLink to="/coffees" className="text-lg font-bold">Coffees</NavLink>
-            <NavLink to="/dashboard" className="text-lg font-bold">Dashboard</NavLink>
+            <NavLink className={({isActive})=> ` ${isActive? 'text-warning' : 'hover:text-warning'}`} to="/">Home</NavLink>
+            <NavLink className={({isActive})=> ` ${isActive? 'text-warning' : 'hover:text-warning'}`} to="/coffees">Coffees</NavLink>
+            <NavLink className={({isActive})=> ` ${isActive? 'text-warning' : 'hover:text-warning'}`} to="/dashboard">Dashboard</NavLink>
         </ul>
         </div>
-        <a className=" text-3xl font-bold">Cook_Book</a>
+        <a className=" text-3xl font-bold">Coffee_Book</a>
     </div>
-    <div className="navbar-end hidden lg:flex">
+    <div className="navbar-end hidden lg:flex ">
         <ul className=" menu menu-horizontal px-1 gap-10">
-            <NavLink to="/" className="text-lg font-bold">Home</NavLink>
-            <NavLink to="/coffees" className="text-lg font-bold">Coffees</NavLink>
-            <NavLink to="/dashboard" className="text-lg font-bold">Dashboard</NavLink>
+            <NavLink className={({isActive})=> `text-lg ${isActive? 'text-warning' : 'hover:text-warning'}`} to="/">Home</NavLink>
+            <NavLink className={({isActive})=> ` text-lg ${isActive? 'text-warning' : 'hover:text-warning'}`} to="/coffees">Coffees</NavLink>
+            <NavLink className={({isActive})=> ` text-lg ${isActive? 'text-warning' : 'hover:text-warning'}`} to="/dashboard">Dashboard</NavLink>
         </ul>
+    </div>
     </div>
     </div>
     );
