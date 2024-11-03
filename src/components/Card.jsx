@@ -1,6 +1,7 @@
 
 
 const Card = ({coffee}) => {
+    
     const {name, image, category, origin, type, id, rating, popularity} = coffee || {}
     return (
         <div className="border p-5 rounded-lg space-y-3">
